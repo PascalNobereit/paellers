@@ -2,3 +2,5 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['beta', 'functions', 'deploy', 'paellers', '--source', 'paellers', '--trigger-http', '--runtime', 'nodejs14', '--allow-unauthenticated', '--region', 'us-central1']
 timeout: '1200s'
+options:
+  logging: CLOUD_LOGGING_ONLY
